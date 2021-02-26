@@ -5,15 +5,26 @@
  #include <signal.h>
  #include <stdio.h>
  #include <stdlib.h>
- #include <strings.h>
+// #include <strings.h>
  #include <sys/socket.h>
  #include <sys/types.h>
  #include <unistd.h>
  #define PORT 5000
  #define MAXLINE 1024
  #include <string.h>
-#include "chat.h"
+//#include "chat.h"
+class Communication{
+    public:
+          //int PORT= 5000;
+          //    //int MAXLINE= 1024;
+               char* message;
+                      int sockfd;
+                          struct sockaddr_in cliaddr, servaddr;
+                              virtual void run(){}
 
+
+
+                              };
 
 
 class Client: public Communication{
